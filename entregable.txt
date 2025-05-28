@@ -1,0 +1,42 @@
+1. Responde la siguiente pregunta en un archivo llamado entregable.txt
+ ¿De dónde sale la etiqueta Navigation?
+
+    R= La etiqueta <Navigation /> en el archivo App.jsx proviene de un componente de React llamado Navigation, el cual se importa mediante la instrucción:
+        import { Navigation } from './Navigation'
+        Esto indica que el componente está definido y exportado en el archivo Navigation.jsx, 
+        ubicado en la misma carpeta que App.jsx. Al ser un componente personalizado, 
+        se puede reutilizar en la aplicación como una etiqueta JSX. En este caso, 
+        se utiliza para renderizar una barra de navegación y se le pasan propiedades 
+        como la imagen del logo y los elementos de navegación.
+
+2. 2.3 Si te das cuenta recibe 2 parametros, explica en entregable.txt 
+    cómo se recibieron esos parametros
+
+    R= La etiqueta <Navigation /> en el archivo App.jsx proviene de un componente de React 
+    llamado Navigation, que se importa con la línea import { Navigation } from './Navigation'. 
+    Esto indica que dicho componente está definido y exportado desde el archivo Navigation.jsx. 
+    En App.jsx, se utiliza <Navigation srcImg={logo} alt="Logo" /> para renderizar el componente 
+    y enviarle dos propiedades: srcImg y alt. 
+    Estas propiedades se reciben dentro del componente Navigation mediante desestructuración de 
+    objetos en la función export function Navigation({srcImg, alt}). Gracias a esto, se puede 
+    acceder directamente a dichas propiedades y utilizarlas dentro del JSX para mostrar, 
+    por ejemplo, la imagen del logo y el texto alternativo. 
+    Este mecanismo permite reutilizar el componente de forma flexible y personalizada 
+    según los valores que se le pasen.
+
+ 3.Revisa nuevamente App.jsx y explica en entregable.txt ¿donde se importan los archivos css, 
+ las imagenes y cómo es que se importa un componente?
+
+    R= En el archivo App.jsx, los archivos CSS se importan al inicio utilizando líneas como import
+     './App.css' e import './grid.css', lo cual permite aplicar estilos definidos en esos archivos
+     a los componentes de la aplicación. Las imágenes se importan mediante rutas relativas, 
+     por ejemplo con import logo from './assets/react.svg', lo que permite utilizar la imagen 
+     como una variable dentro del código JSX. Por otro lado, los componentes se importan también 
+     al principio del archivo usando instrucciones como import { Navigation } from './Navigation' 
+     e import { Grid } from './Grid', lo cual permite reutilizar funciones exportadas desde otros 
+     archivos y representarlas como etiquetas personalizadas dentro del componente principal App.
+
+
+
+
+
